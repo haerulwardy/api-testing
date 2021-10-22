@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Playlists from './Playlists'
 import DetailPlaylist from './DetailPlaylist'
 import Video from './Video'
+import PomodoroTimer from './PomodoroTimer'
+import TodoList from './TodoList'
 
 const App = () => {
     return(
@@ -13,6 +15,12 @@ const App = () => {
                 </Route>
                 <Route path="/playlist/:id" component={DetailPlaylist}/>
                 <Route path="/video/:videoId" component={Video}/>
+                <Route path="/pomodoro">
+                    <PomodoroTimer />
+                </Route>
+                <Route path="/todolist">
+                    <TodoList />
+                </Route>
             </Switch>
         </Router>
     )
